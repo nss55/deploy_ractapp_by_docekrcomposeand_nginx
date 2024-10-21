@@ -14,11 +14,11 @@ services:
     image: nginx:latest
     container_name: omnadata-nginx
     ports:
-      - "80:80"
-     # - "443:443"
+   #   - "80:80"
+      - "443:443"
     volumes:
       - /home/ubuntu/interns_devops/nginx/nginx.conf:/etc/nginx/nginx.conf
-    #  - /etc/nginx/ssl:/etc/nginx/ssl:ro  # SSL certificate files
+      - /etc/nginx/ssl:/etc/nginx/ssl:ro  # SSL certificate files
     networks:
       - itpa_backend_default
 
